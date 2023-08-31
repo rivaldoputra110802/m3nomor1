@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Hitung faktorial dari input</h1>
+<h2>Masukkan sembarang angka</h2>
+<input id="numb">
+
+<button type="button" onclick="myFunction()">click</button><br>
+<p>Catatan : Pengguna diminta memasukkan sebuah angka bulat positif sehingga setelah tombol "click" ditekan akan menampilkan hasil faktorial dari bilangan tersebut</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("numb").value;
+	function factorial(n) {
+		if (n===0) {
+			return 1;
+		}
+		return n * factorial(n-1);
+	}
+	document.getElementById("demo").innerHTML = 'angka faktorial dari '+text+' adalah : '+factorial(text); 
+}
+
+</script>
